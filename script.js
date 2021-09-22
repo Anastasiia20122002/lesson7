@@ -12,17 +12,15 @@ input.addEventListener("input", (e)=>{{}
 })
 button.addEventListener("click", async ()=>{
   button.innerHTML="Loading...";
-  let name=document.getElementById("divider2")
-  name.insertAdjacentHTML('afterbegin','<hr>');
-  name.insertAdjacentHTML('beforeend', '<div id="divider3"><h3>name: </h3></div>')
-  name.insertAdjacentHTML('beforeend', '<div id="divider4"><h3>email: </h3></div>')
-  name.insertAdjacentHTML('beforeend', '<div id="divider5"><h3>phone: </h3></div>')
-  const res=await fetch('https://jsonplaceholder.typicode.com/users/1');
+  document.getElementById("line").style.visibility="visible";
+  document.getElementById("divider3").innerHTML=`<h3>name:</h3>`;
+  document.getElementById("divider4").innerHTML=`<h3>email:</h3>`;
+  document.getElementById("divider5").innerHTML=`<h3>phone:</h3>`;
+  const res=await fetch('https://jsonplaceholder.typicode.com/users');
   const users=await res.json(); 
-  console.log(users) 
-  name.insertAdjacentHTML('beforeend', `<div id="divider6"><h3>${users.name}</h3></div>`);
-  name.insertAdjacentHTML('beforeend', `<div id="divider7"><h3>${users.email}</h3></div>`);
-  name.insertAdjacentHTML('beforeend', `<div id="divider8"><h3>${users.phone}</h3></div>`);   
+  document.getElementById("divider6").innerHTML=`<h3>${users[input.value-1].name}</h3>`;
+  document.getElementById("divider7").innerHTML=`<h3>${users[input.value-1].email}</h3>`;
+  document.getElementById("divider8").innerHTML=`<h3>${users[input.value-1].phone}</h3>`
   button.disabled=false;
   button.innerHTML="GET";
 });
