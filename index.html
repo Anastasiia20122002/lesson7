@@ -7,117 +7,203 @@
     *{
         margin: 0
     }
+    *{
+        padding:0
+    }
         #header{
             color:white;
-            background-color: purple;
-            box-sizing: border-box;
-            padding: 20px;
-            width: 100%;
-            font-size: 25px;
+            height:77px;
+            width:1440px;
+            background-color: #9B59B6;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            align-items:center;
+            vertical-align:middle;
+            padding-left:48px;
+            display:flex;
         }
         #footer{
-            background-color:purple;
-            box-sizing: border-box;
-            position:absolute;
-            padding: 35px;
-            width: 100%;
-            bottom: 0;
+            position: absolute;
+            width: 1440px;
+            height: 77px;
+            left: 0px;
+            top: 947px;
+
+            background: #8E44AD;
         }
-        #position{
-         position: absolute;
-         left: 80px;
-         top: 170px;
-         width: 80%;        }
-      
-        #divider{
-         position: absolute;
-         left: 80px;
-         top: 250px;
-         width: 70%;  
-        }
-        #divider1{
-        position: absolute;
-         left: 80px;
-         top: 210px;
-         width: 70%;  
-        }
-        #divider2{
-        position: absolute;
-         left: 80px;
-         top: 300px;
-         width: 70%; 
+        h3{
+            padding-left:48px;
+            padding-top:72px;
         }
         #input{
-            border-radius:4px;
-            height: 20px;
-            width:115px; 
+            position: absolute;
+            width: 116px;
+            height: 33px;
+            left: 48px;
+            top: 182px;
+            background: #FFFFFF;
+            border: 1px solid #BDC3C7;
+            box-sizing: border-box;
+            border-radius: 5px;
         }
-        #divider3{
-        position: absolute;
-         left:100px;
-         top: 300px;
-         width: 70%;    
+        #name{
+            padding-left:48px;
+            padding-top:166px;
         }
-        #divider4{
-        position: absolute;
-         left:100px;
-         top: 325px;
-         width: 70%;    
+        #email{
+            padding-left:48px;
+            padding-top:13px;
         }
-        #divider5{
-        position: absolute;
-         left:100px;
-         top: 350px;
-         width: 70%;    
+        #phone{
+            padding-left:48px;
+            padding-top:13px;
         }
-        #divider6{
-        position: absolute;
-        left: 300px;
-        top: 300px;
-        width: 70%;    
+        #name-info{
+            font-weight: 500;
+            padding-left:23px;
+            padding-top:164px;
         }
-        #divider7{
-        position: absolute;
-        left: 300px;
-        top: 325px;
-        width: 70%;    
+        #email-info{
+            font-weight: 500;
+            padding-left:23px;
+            padding-top:13px;
         }
-        #divider8{
-        position: absolute;
-        left: 300px;
-        top: 350px;
-        width: 70%;    
+        #phone-info{
+            font-weight: 500;
+            padding-left:23px;
+            padding-top:13px;
+        }
+        img{
+            width:30px;
+            height:32px;
+            padding-left:12px;
         }
         #button{
-            background-color: lightgray;
-            border: 0;
-            border-radius: 8px;
-            height: 30px;
-            width:125px; 
-            font-size:15px;    
-            font-weight: bold;  
-            color:white;}
+            border:0;
+            position: absolute;
+            width: 116px;
+            height: 33px;
+            left: 48px;
+            top: 235px;
+            color:white;
+            background: #7F8C8D;;
+            border-radius: 5px;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;      
+        }
+        #button1{
+            visibility:hidden;
+            border:0;
+            color:white;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            position: absolute;
+            width: 116px;
+            height: 33px;
+            left: 278px;
+            top: 451px;
+            background: #9B59B6;
+            border-radius: 5px;
+        }
         #line{
-            visibility: hidden;
-            width: 45%
+            position: absolute;
+            width: 346px;
+            height: 0px;
+            left: 48px;
+            top: 309px;
+            border: 1px solid #BDC3C7;
+        }
+        #line1{
+            position: absolute;
+            width: 346px;
+            height: 0px;
+            left: 48px;
+            top: 507.5px;
+
+            border: 1px solid #BDC3C7;        
+        }
+        #wrapper {
+            display: flex;
+        }
+        #info{
+            visibility:hidden;
+            flex: 0 0 15%;
+                }
+        #info1{
+            visibility:hidden;
+            flex: 0 0 15%;
+        }
+        #saved{
+            padding-top:29px;
+
+        }
+        #list{
+            padding-left:60px;
+            padding-top:16px;
+        }
+        #import-img1{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 243px;
+            top: 574px;
+            background: url(clear.png);
+        }
+        #import-img2{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 243px;
+            top: 590px;
+            background: url(clear.png);
+        }
+        #import-img3{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 243px;
+            top: 606px;
+            background: url(clear.png);
         }
     </style>
     </head>
     <body>
-    <header id="header">Users API</header>
-    <footer id="footer"></footer>
-    <div id="position">
+    <header id="header">Users API
+    <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" id= "image"></img>
+    </header>
     <h3>users:</h3>
-    </div> 
-    <div id="divider"><button id="button">GET</button></div>
-    <div id="divider1"><input id="input" type="number"  placeholder="ID" min="1" max="10"/></div>
-    <div id="divider2"><hr id="line"></div>
-    <div id="divider3"></div>
-    <div id="divider4"></div>
-    <div id="divider5"></div>
-    <div id="divider6"></div>
-    <div id="divider7"></div>
-    <div id="divider8"></div>
+    <input id="input" type="number" placeholder="ID" min="1" max="10"/>
+    <button id="button">GET</button>
+    <div id="wrapper">
+
+    <div id="info">
+    <hr id="line">
+    <h3 id="name">name:</h3>
+    <h3 id="email">email:</h3>
+    <h3 id="phone">phone:</h3>
+    <hr id="line1">
+    </div>
+    <div id="info1">
+    <h3 id="name-info"></h3>
+    <h3 id="email-info"></h3>
+    <h3 id="phone-info"></h3>
+    </div>
+    </div>
+    <button id="button1">Save</button>
+    <div id="saved">
+    <h3 id="saved-text">Saved</h3>
+        <ol id="list">
+        <li>Leanne Graham<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img1"></img></li>
+        <li>Erwin Howell<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img2"></img></li>
+        <li>Clementine Bauch<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img3"></img></li>
+         </ol>
+    </div>
     <footer id="footer"></footer>
     <script src="script.js"></script>
     </body>

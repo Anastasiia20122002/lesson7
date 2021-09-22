@@ -7,20 +7,19 @@ input.addEventListener("input", (e)=>{{}
   }
   else{
     button.disabled=false;
-    button.style.background='purple';
+    button.style.background='#9B59B6';
   }
 })
 button.addEventListener("click", async ()=>{
   button.innerHTML="Loading...";
-  document.getElementById("line").style.visibility="visible";
-  document.getElementById("divider3").innerHTML=`<h3>name:</h3>`;
-  document.getElementById("divider4").innerHTML=`<h3>email:</h3>`;
-  document.getElementById("divider5").innerHTML=`<h3>phone:</h3>`;
+  document.getElementById("info").style.visibility="visible";
   const res=await fetch('https://jsonplaceholder.typicode.com/users');
   const users=await res.json(); 
-  document.getElementById("divider6").innerHTML=`<h3>${users[input.value-1].name}</h3>`;
-  document.getElementById("divider7").innerHTML=`<h3>${users[input.value-1].email}</h3>`;
-  document.getElementById("divider8").innerHTML=`<h3>${users[input.value-1].phone}</h3>`
+  document.getElementById("info1").style.visibility="visible";
+  document.getElementById("name-info").innerHTML=`${users[input.value-1].name}`;
+  document.getElementById("email-info").innerHTML=`${users[input.value-1].email}`;
+  document.getElementById("phone-info").innerHTML=`${users[input.value-1].phone}`
+  document.getElementById("button1").style.visibility="visible";
   button.disabled=false;
   button.innerHTML="GET";
 });
