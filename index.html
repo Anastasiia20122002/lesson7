@@ -4,17 +4,19 @@
     <title>Document</title>
 
     <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
     *{
         margin: 0
     }
     *{
-        padding:0
+        padding:0;
+        font-family: 'Roboto', sans-serif;
+
     }
         #header{
             color:white;
             height:77px;
-            width:1440px;
-            background-color: #9B59B6;
+            background-color: #8E44AD;
             font-family: Roboto;
             font-style: normal;
             font-weight: bold;
@@ -25,12 +27,9 @@
             display:flex;
         }
         #footer{
-            position: absolute;
-            width: 1440px;
+            position: relative;
+            top: 301px;
             height: 77px;
-            left: 0px;
-            top: 947px;
-
             background: #8E44AD;
         }
         h3{
@@ -49,31 +48,40 @@
             border-radius: 5px;
         }
         #name{
+            width: 50px;
+            font-weight: 900;
             padding-left:48px;
             padding-top:166px;
         }
         #email{
+            width: 55px;
+            font-weight: 900;
             padding-left:48px;
             padding-top:13px;
         }
         #phone{
+            width: 50px;
+            font-weight: 900;
             padding-left:48px;
             padding-top:13px;
         }
         #name-info{
-            font-weight: 500;
-            padding-left:23px;
+            width: 273px;
+            font-weight: 600;
             padding-top:164px;
+            text-align: right;
         }
         #email-info{
-            font-weight: 500;
-            padding-left:23px;
+            width: 273px;
+            font-weight: 600;
             padding-top:13px;
+            text-align: right;
         }
         #phone-info{
-            font-weight: 500;
-            padding-left:23px;
+            width: 273px;
+            font-weight: 600;
             padding-top:13px;
+            text-align: right;
         }
         img{
             width:30px;
@@ -106,14 +114,14 @@
             position: absolute;
             width: 116px;
             height: 33px;
-            left: 278px;
+            left: 350px;
             top: 451px;
             background: #9B59B6;
             border-radius: 5px;
         }
         #line{
             position: absolute;
-            width: 346px;
+            width: 415px;
             height: 0px;
             left: 48px;
             top: 309px;
@@ -121,7 +129,7 @@
         }
         #line1{
             position: absolute;
-            width: 346px;
+            width: 415px;
             height: 0px;
             left: 48px;
             top: 507.5px;
@@ -133,19 +141,22 @@
         }
         #info{
             visibility:hidden;
-            flex: 0 0 15%;
+            width: 121px;
+
                 }
         #info1{
+            padding-left:23px;
             visibility:hidden;
-            flex: 0 0 15%;
+            width: 200px;
         }
         #saved{
             padding-top:29px;
-
         }
         #list{
-            padding-left:60px;
+            padding-left: 68px;
             padding-top:16px;
+            font-weight: 600;
+            line-height: 21px;
         }
         #import-img1{
             position: absolute;
@@ -153,23 +164,25 @@
             height: 10px;
             left: 243px;
             top: 574px;
-            background: url(clear.png);
         }
         #import-img2{
             position: absolute;
             width: 10px;
             height: 10px;
             left: 243px;
-            top: 590px;
-            background: url(clear.png);
+            top: 595px;
         }
         #import-img3{
             position: absolute;
             width: 10px;
             height: 10px;
             left: 243px;
-            top: 606px;
-            background: url(clear.png);
+            top: 615px;
+        }
+        #saved-text{
+            font-weight: bolder;
+            font-size: 18px;
+            line-height: 21px;
         }
     </style>
     </head>
@@ -177,11 +190,10 @@
     <header id="header">Users API
     <img src="https://cdn-icons-png.flaticon.com/512/219/219983.png" id= "image"></img>
     </header>
-    <h3>users:</h3>
+    <h3><b>user:</b></h3>
     <input id="input" type="number" placeholder="ID" min="1" max="10"/>
-    <button id="button">GET</button>
+    <button id="button">Get</button>
     <div id="wrapper">
-
     <div id="info">
     <hr id="line">
     <h3 id="name">name:</h3>
@@ -198,11 +210,12 @@
     <button id="button1">Save</button>
     <div id="saved">
     <h3 id="saved-text">Saved</h3>
+
         <ol id="list">
-        <li>Leanne Graham<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img1"></img></li>
-        <li>Erwin Howell<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img2"></img></li>
-        <li>Clementine Bauch<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img3"></img></li>
-         </ol>
+        <li class="list-el">Leanne Graham<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img1"></img></li>
+        <li class="list-el">Erwin Howell<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img2"></img></li>
+        <li class="list-el">Clementine Bauch<img src="https://lh3.googleusercontent.com/proxy/GOfIWJ0xl_PuAlYqmr5qew4U4a6NztMGi7n4A40AlJeufYXSpLMISopzKXDLcl7UKefo855-uCuK4wm26QKlyLJqD7J4xJg" id="import-img3"></img></li>
+        </ol>
     </div>
     <footer id="footer"></footer>
     <script src="script.js"></script>

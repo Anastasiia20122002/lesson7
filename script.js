@@ -21,5 +21,5 @@ button.addEventListener("click", async ()=>{
   document.getElementById("phone-info").innerHTML=`${users[input.value-1].phone}`
   document.getElementById("button1").style.visibility="visible";
   button.disabled=false;
-  button.innerHTML="GET";
+  button.innerHTML="Get";
 });
